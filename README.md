@@ -1,16 +1,20 @@
-# flutter_api_with_retrofit
+# Retrofit with Flutter
 
-A new Flutter application.
+A new flutter applicaiton with very simple retrofit client (the sample of presentation).
 
-## Getting Started
+Read mopre here: 
 
-This project is a starting point for a Flutter application.
+# Description
 
-A few resources to get you started if this is your first Flutter project:
+A very simple sample of retrofit client & generate the client file in project. So, I am going to create an app of Retrofit in a flutter with very easy and understandable code. I also integrate a dependency injection in this app.That dependencies will help to handle all data parsing and we need to write less code.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+# Dependencies
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+ retrofit: ^1.3.4+1
+ dio: ^3.0.10
+ built_value: ^7.1.0
+ json_annotation: ^3.1.0
+
+# Conclusion
+
+I hope this article has cleared up some of the major question marks regrading to the Hero aniamtion. I am exploring the flutter framework, and will report all of my new findings.

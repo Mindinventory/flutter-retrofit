@@ -10,10 +10,10 @@ A very simple sample of retrofit client & generate the client file in project. S
 
 # Dependencies
 
- retrofit: ^1.3.4+1
- dio: ^3.0.10
- built_value: ^7.1.0
- json_annotation: ^3.1.0
+ - retrofit: ^1.3.4+1
+ - dio: ^3.0.10
+ - built_value: ^7.1.0
+ - json_annotation: ^3.1.0
 
 # Conclusion
 

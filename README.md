@@ -18,3 +18,6 @@ A very simple sample of retrofit client & generate the client file in project. S
 # Conclusion
 
 I hope this article has cleared up some of the major question marks regrading to the Hero aniamtion. I am exploring the flutter framework, and will report all of my new findings.
+
+# LICENSE!
+flutter-retrofit is MIT-licensed.

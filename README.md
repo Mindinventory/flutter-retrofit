@@ -2,7 +2,7 @@
 
 A new flutter applicaiton with very simple retrofit client (the sample of presentation).
 
-Read mopre here: https://medium.com/mindful-engineering/retrofit-the-easiest-way-to-call-rest-apis-is-flutter-fe55d1e7c5c2
+Read more here: https://medium.com/mindful-engineering/retrofit-the-easiest-way-to-call-rest-apis-is-flutter-fe55d1e7c5c2
 
 # Description
 

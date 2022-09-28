@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -32,10 +32,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -43,10 +41,8 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: _buildBody(context),
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
-
-        },
-        label:Icon(Icons.cancel),
+        onPressed: () {},
+        label: Icon(Icons.cancel),
         backgroundColor: Colors.green,
       ),
     );
@@ -59,8 +55,8 @@ class _MyHomePageState extends State<MyHomePage> {
       future: client.getUsers(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
-          final ResponseData posts = snapshot.data;
-          return _buildListView(context, posts);
+          final ResponseData? posts = snapshot.data;
+          return _buildListView(context, posts!);
         } else {
           return Center(
             child: CircularProgressIndicator(),
@@ -72,17 +68,24 @@ class _MyHomePageState extends State<MyHomePage> {
 
   // build list view & its tile
   Widget _buildListView(BuildContext context, ResponseData posts) {
-    return
-      ListView.builder(itemBuilder: (context,index){
+    return ListView.builder(
+      itemBuilder: (context, index) {
         return Card(
           child: ListTile(
-            leading: Icon(Icons.account_box,color: Colors.green,size: 50,),
-            title: Text(posts.data[index]['name'],style: TextStyle(fontSize: 20),),
+            leading: Icon(
+              Icons.account_box,
+              color: Colors.green,
+              size: 50,
+            ),
+            title: Text(
+              posts.data[index]['name'],
+              style: TextStyle(fontSize: 20),
+            ),
             subtitle: Text(posts.data[index]['email']),
           ),
         );
-      },itemCount: posts.data.length,
-      );
+      },
+      itemCount: posts.data.length,
+    );
   }
-
 }

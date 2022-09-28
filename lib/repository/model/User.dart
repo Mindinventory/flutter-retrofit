@@ -1,15 +1,22 @@
-
 // for manual serialization
 class User {
-  int id;
-  String name;
-  String email;
-  String gender;
-  String status;
-  String created_at;
-  String updated_at;
+  final int id;
+  final String name;
+  final String email;
+  final String gender;
+  final String status;
+  final String createdAt;
+  final String updatedAt;
 
-  User({this.id, this.name, this.email,this.gender, this.status, this.created_at, this.updated_at});
+  User({
+    required this.id,
+    required this.name,
+    required this.email,
+    required this.gender,
+    required this.status,
+    required this.createdAt,
+    required this.updatedAt,
+  });
 
   factory User.fromJson(Map<String, dynamic> json) {
     return User(
@@ -18,8 +25,8 @@ class User {
       email: json['email'],
       gender: json['gender'],
       status: json['status'],
-      created_at: json['created_at'],
-      updated_at: json['updated_at'],
+      createdAt: json['created_at'],
+      updatedAt: json['updated_at'],
     );
   }
 
@@ -30,9 +37,8 @@ class User {
       'email': email,
       'gender': gender,
       'status': status,
-      'created_at': created_at,
-      'updated_at': updated_at,
+      'created_at': createdAt,
+      'updated_at': updatedAt,
     };
   }
 }
-

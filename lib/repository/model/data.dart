@@ -1,29 +1,46 @@
 import 'package:json_annotation/json_annotation.dart';
+
 part 'data.g.dart';
 
-@JsonSerializable()
-class User{
-  int id;
-  String name;
-  String email;
-  String gender;
-  String status;
-  String created_at;
-  String updated_at;
+@JsonSerializable(fieldRename: FieldRename.snake)
+class User {
+  final int? id;
+  final String? name;
+  final String? email;
+  final String? gender;
+  final String? status;
+  final String? createdAt;
+  final String? updatedAt;
 
-  User({this.id, this.name, this.email,this.gender, this.status, this.created_at, this.updated_at});
+  User({
+    required this.id,
+    required this.name,
+    required this.email,
+    required this.gender,
+    required this.status,
+    required this.createdAt,
+    required this.updatedAt,
+  });
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
+
   Map<String, dynamic> toJson() => _$UserToJson(this);
 }
 
-@JsonSerializable()
-class ResponseData{
-  int code;
-  dynamic meta;
-  List<dynamic>data;
-  ResponseData({this.code, this.meta, this.data});
-  factory ResponseData.fromJson(Map<String, dynamic> json) => _$ResponseDataFromJson(json);
-  Map<String, dynamic> toJson() => _$ResponseDataToJson(this);
+@JsonSerializable(fieldRename: FieldRename.snake)
+class ResponseData {
+  final int code;
+  final dynamic meta;
+  final List<dynamic> data;
 
+  ResponseData({
+    required this.code,
+    required this.meta,
+    required this.data,
+  });
+
+  factory ResponseData.fromJson(Map<String, dynamic> json) =>
+      _$ResponseDataFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ResponseDataToJson(this);
 }
